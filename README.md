@@ -1,2 +1,2 @@
-# an-api-that-s-a-meme
+# apimeme
 an api that's a meme
