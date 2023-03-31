@@ -11,11 +11,7 @@ database = load(open("database.json", "r"))
 async def codetocrash(req:Request):
     """returns code that crashes a process depending on the coding language submitted via xml
     idea from: https://github.com/somerandomcloud
-    format:
-    <?xml version="1.0" encoding="UTF-8" ?>
-        <root>
-            <lang>language goes here</lang>
-        </root>
+    format: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;root&gt;&lt;lang&gt;language goes here&lt;/lang&gt;&lt;/root&gt;
     example request body: just send the plain xml to the api"""
     data = (await req.body()).decode("utf-8").split("<lang>")[1].split("</lang>")[0].replace("\t","").replace("\n","")\
             .replace("\r","").lower()
