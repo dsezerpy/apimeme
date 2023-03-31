@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  lighttube:
+    image: dsezerpy/apimeme:latest
+    restart: unless-stopped
+    ports:
+      # Replace 7135 with whichever port you want to connect from
+      - 127.0.0.1:7135:80
