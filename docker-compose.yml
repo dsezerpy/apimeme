@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  lighttube:
+  apimeme:
     image: dsezerpy/apimeme:latest
     restart: unless-stopped
     ports:
