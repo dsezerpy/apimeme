@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Response,Request,status
 from fastapi.responses import PlainTextResponse,StreamingResponse
 from json import load,loads
-import random,asyncio
+import random,asyncio,os
 
 app = FastAPI()
 database = load(open("database.json", "r"))
